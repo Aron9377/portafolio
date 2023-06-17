@@ -28,7 +28,7 @@
    $form.addEventListener("submit",(e)=> {
       e.preventDefault();
       $loader.classList.remove("none");
-      fetch("http://formsubmit.co/ajax/aron9377@gmail.com",{
+      fetch("http://formsubmit.co/aron9377@gmail.com",{
          method:"POST",
          body: new FormData(e.target),
       }).then((res)=>(res.ok ? res.json(): Promise.reject(res)))
