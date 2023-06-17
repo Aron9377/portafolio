@@ -22,7 +22,7 @@
 
 ((d)=> {
    const $form = d.querySelector(".contact-form"),
-     $loader = d.querySelector(".contact-form-loader")
+     $loader = d.querySelector(".contact-form-loader"),
      $response = d.querySelector(".contact-form-response")
 
    $form.addEventListener("submit",(e)=> {
@@ -30,7 +30,7 @@
       $loader.classList.remove("none");
       fetch("http://formsubmit.co/ajax/aron9377@gmail.com",{
          method:"POST",
-         body: new FormData(e.target)
+         body: new FormData(e.target),
       }).then((res)=>(res.ok ? res.json(): Promise.reject(res)))
       .then((json)=>{
          console.log(json);
